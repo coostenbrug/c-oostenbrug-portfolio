@@ -1,3 +1,8 @@
 import React from "react"
+import { Button } from "../components"
+import { hiddenByComingSoon } from "../utils"
 
-export default () => <div>Coming Soon</div>
+
+const LandingPage = () => <Button color="blue">Button example</Button>
+
+export default hiddenByComingSoon(LandingPage)

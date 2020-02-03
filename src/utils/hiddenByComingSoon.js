@@ -20,9 +20,7 @@ const hiddenByComingSoon = WrappedComponent => () => {
 
     function handleKeyDown(e) {
         map[e.keyCode] = true;
-       
-        console.log(e.keyCode)
-        
+               
         if(map[90] && map[80]) {
             setHidden(false)
             map = []

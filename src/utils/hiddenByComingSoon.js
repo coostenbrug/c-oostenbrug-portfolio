@@ -1,10 +1,20 @@
-import React, {useState} from "react"
+import React, {useState, useEffect} from "react"
 
 const hiddenByComingSoon = WrappedComponent => () => {
+
     const [hidden, setHidden] = useState(true)
 
-    window.addEventListener("keydown",handleKeyDown)
-    window.addEventListener("keyup",handleKeyUp)
+    useEffect(() => {
+        if (hidden == true){
+            document.addEventListener("keydown",handleKeyDown)
+            document.addEventListener("keyup",handleKeyUp)
+        }
+
+        return () => {
+            document.removeEventListener("keydown",handleKeyDown)
+            document.removeEventListener("keyup",handleKeyUp)
+        }
+    }, [hidden])
 
     let map = {};
 
@@ -12,9 +22,8 @@ const hiddenByComingSoon = WrappedComponent => () => {
         map[e.keyCode] = true;
        
         console.log(e.keyCode)
-
+        
         if(map[90] && map[80]) {
-            window.removeEventListener("keydown",handleKeyDown)
             setHidden(false)
             map = []
         } 
@@ -26,7 +35,7 @@ const hiddenByComingSoon = WrappedComponent => () => {
 
     return(
         hidden ?
-        <div> Coming Soon </div>
+        <div onKeyDown={handleKeyDown} onKeyUp={handleKeyUp}> Coming Soon </div>
         :
         <WrappedComponent/>
     )

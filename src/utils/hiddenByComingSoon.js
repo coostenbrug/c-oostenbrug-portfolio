@@ -3,16 +3,14 @@ import React, {useState} from "react"
 const hiddenByComingSoon = WrappedComponent => () => {
     const [hidden, setHidden] = useState(true)
 
-    window.addEventListener("keydown",handleKeyDown)
-    window.addEventListener("keyup",handleKeyUp)
+    document.addEventListener("keydown",handleKeyDown)
+    document.addEventListener("keyup",handleKeyUp)
 
     let map = {};
 
     function handleKeyDown(e) {
         map[e.keyCode] = true;
        
-        console.log(e.keyCode)
-
         if(map[90] && map[80]) {
             window.removeEventListener("keydown",handleKeyDown)
             setHidden(false)

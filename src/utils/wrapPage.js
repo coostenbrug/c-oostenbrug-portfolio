@@ -1,10 +1,10 @@
 import React from "react"
-import styled, { ThemeProvider, createGlobalStyle } from "styled-components"
+import { ThemeProvider, createGlobalStyle } from "styled-components"
 import theme from "../theme"
 
 const GlobalStyle = createGlobalStyle({
     "body": {
-        background: theme.testColor
+        background: theme.colors.primary
     }
 })
 

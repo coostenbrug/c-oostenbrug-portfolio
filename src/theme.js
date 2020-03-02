@@ -9,6 +9,9 @@ const theme = {
 
         white: "#FFFFFF",
         black: "#111111"
+    },
+    fonts: {
+        base: "'Notable', sans-serif;"
     }
 }
 

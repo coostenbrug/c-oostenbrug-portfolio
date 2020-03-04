@@ -1,6 +1,7 @@
 import styled from "styled-components"
 import React from "react"
 import theme from "../theme"
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome" 
 
 const BoxLinkWrap = styled.a(({background})=>({
     flexGrow: 1,
@@ -9,7 +10,7 @@ const BoxLinkWrap = styled.a(({background})=>({
     display: "flex",
     flexDirection: "column",
     justifyContent: "center",
-    padding: "8px",
+    padding: "32px 8px",
     cursor: "pointer",
     textDecoration: "none",
     background,
@@ -20,13 +21,13 @@ const BoxLinkWrap = styled.a(({background})=>({
 
 const BoxLinkTitle = styled.p({
     fontSize: "24px",
-    margin: "8px auto",
+    margin: "8px auto 16px auto",
     textAlign: "center"
 })
 
 const BoxLink = ({background, href, children, title}, props) => (
     <BoxLinkWrap background={background} href={href}>
-        <BoxLinkTitle>ICON</BoxLinkTitle>
+        <FontAwesomeIcon icon={coffee}/>
         <BoxLinkTitle>{title}</BoxLinkTitle>
         {children}
     </BoxLinkWrap>

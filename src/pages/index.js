@@ -2,7 +2,10 @@ import React from "react"
 import { Button, BoxLinkSet, BoxLink, Tag, TagSet, Section } from "../components"
 import { hiddenByComingSoon, wrapPage } from "../utils"
 import theme from "../theme"
+import { faCoffee } from "@fortawesome/free-solid-svg-icons"
+import { library } from "'@fortawesome/fontawesome-svg-core"
 
+library.add(faCoffee)
 
 const LandingPage = () => (
     <Section title="Projects">

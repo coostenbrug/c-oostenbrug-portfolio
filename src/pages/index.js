@@ -56,4 +56,4 @@ const LandingPage = () => (
     </>
 )
 
-export default wrapPage(LandingPage)
+export default wrapPage(hiddenByComingSoon(LandingPage))

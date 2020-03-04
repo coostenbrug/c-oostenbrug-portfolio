@@ -33,7 +33,7 @@ const hiddenByComingSoon = WrappedComponent => () => {
 
     return(
         hidden ?
-        <div onKeyDown={handleKeyDown} onKeyUp={handleKeyUp}> Coming Soon </div>
+        <p style={{margin: "200px auto", textAlign: "center"}} onKeyDown={handleKeyDown} onKeyUp={handleKeyUp}> Coming Soon </p>
         :
         <WrappedComponent/>
     )

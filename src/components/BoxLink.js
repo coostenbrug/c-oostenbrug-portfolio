@@ -2,8 +2,9 @@ import styled from "styled-components"
 import React from "react"
 import theme from "../theme"
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome" 
+import { darken } from "polished"
 
-const BoxLinkWrap = styled.a(({background})=>({
+const BoxLinkWrap = styled.a(({background, theme})=>({
     flexGrow: 1,
     minWidth: "200px",
     maxWidth: "400px",
@@ -16,7 +17,9 @@ const BoxLinkWrap = styled.a(({background})=>({
     background,
     ":visited": {
         color: "inherit"
-    }
+    },
+    outline: `3px solid ${darken(0.1,background)}`,
+    outlineOffset: "-6px"
 }))
 
 const BoxLinkTitle = styled.p(({color})=>({
@@ -42,7 +45,7 @@ const BoxLink = ({background, color, href, children, title, icon}, props) => (
 
 BoxLink.defaultProps = {
     background: theme.colors.secondaryDark,
-    color: theme.colors.white,
+    color: theme.colors.textColorSecondary,
     icon: "coffee",
     title: "Project Title"
 }

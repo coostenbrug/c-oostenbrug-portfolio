@@ -8,13 +8,13 @@ const theme = {
         secondaryLight: "#957396",
         secondaryDark:"#451947",
 
-        white: "#FFFFFF",
-        black: "#111111",
+        white: "#FFF",
+        black: "#333",
 
         darkGrey: "#393E41",
 
-        textColorPrimary: "#111111",
-        textColorSecondary: "#FFFFFF"
+        textColorPrimary: "#333",
+        textColorSecondary: "#F7F7F4"
     },
     fonts: {
         base: "'Notable', sans-serif;",

@@ -6,7 +6,7 @@ const projectData = [
         tags: ["Tag 1", "Tag 2"],
         href: "/projects/project1",
         icon: "coffee",
-        background: theme.colors.primaryDark
+        background: theme.colors.darkGrey
     },
     {
         title: "Project Title 2",
@@ -41,7 +41,7 @@ const projectData = [
         tags: ["Tag 1", "Tag 2"],
         href: "/projects/project1",
         icon: "pills",
-        background: theme.colors.primaryDark
+        background: theme.colors.darkGrey
     },
 ]
 

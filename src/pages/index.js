@@ -23,7 +23,7 @@ const LandingPage = () => (
         <Section title="Experience" id="Experience">
         <p>Filler text filler text filler text filler text filler text filler text filler text filler text filler text filler text filler text filler text filler text filler text filler text filler text filler text filler text filler text filler text filler text</p>
         </Section>
-        <Section title="Projects" id="Projects">
+        <Section title="Projects" id="Projects" mobilePadding={false}>
             <BoxLinkSet>
                 {projectData.map(projectLink => (
                     <BoxLink

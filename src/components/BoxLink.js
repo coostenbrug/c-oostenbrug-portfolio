@@ -18,7 +18,14 @@ const BoxLinkWrap = styled.a(({background, theme})=>({
         color: "inherit"
     },
     outline: `3px solid ${darken(0.1,background)}`,
-    outlineOffset: "-6px"
+    outlineOffset: "-6px",
+    ":hover": {
+        background: darken(0.1, background),
+        outline: `3px solid ${darken(0.15,background)}`
+    },
+    ":focus": {
+        outline: `3px solid ${theme.colors.lightBlue}`
+    }
 }))
 
 const BoxLinkTitle = styled.p(({color})=>({

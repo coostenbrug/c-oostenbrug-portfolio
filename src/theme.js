@@ -14,7 +14,10 @@ const theme = {
         darkGrey: "#393E41",
 
         textColorPrimary: "#333",
-        textColorSecondary: "#F7F7F4"
+        textColorSecondary: "#F7F7F4",
+
+        lightBlue: "#54B9DD",
+        darkBlue: "#1E555C"
     },
     fonts: {
         base: "'Notable', sans-serif;",

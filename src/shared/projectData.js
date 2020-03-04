@@ -13,21 +13,21 @@ const projectData = [
         tags: ["Tag 3"],
         href: "/projects/project1",
         icon: "pills",
-        background: theme.colors.primaryDarkest
+        background: theme.colors.secondaryDark
     },
     {
         title: "Project Title 3",
         tags: ["Tag 1", "Tag 3"],
         href: "/projects/project1",
         icon: "coffee",
-        background: theme.colors.secondaryDark
+        background: theme.colors.primaryDarkest
     },
     {
         title: "Project Title 4",
         tags: ["Tag 2", "Tag 4"],
         href: "/projects/project1",
         icon: "pills",
-        background: theme.colors.primaryDark
+        background: theme.colors.darkBlue
     },
     {
         title: "Project Title 5",

@@ -15,6 +15,7 @@ const HeaderInner = styled.div({
     alignItems: "center",
     height: "56px",
     margin: "0 auto",
+    padding: "0 16px",
     maxWidth: "1200px"
 })
 const Header = props => (

@@ -16,13 +16,19 @@ const SectionInner = styled.div(({mobilePadding})=>({
     padding: mobilePadding ? "0 16px" : "0"
 }))
 
-const Section = ({title, children, mobilePadding, ...props}) => (
-    <>
+const ScrollAnchor = styled.div({
+    position: "absolute",
+    top: -56
+})
+
+const Section = ({title, children, mobilePadding, anchorId, ...props}) => (
+    <div style={{position: "relative"}}>
         <SectionHeader {...props}>{title}</SectionHeader>
+        <ScrollAnchor id={anchorId}/>
         <SectionInner mobilePadding={mobilePadding}>
             {children}
         </SectionInner>
-    </>
+    </div>
 )
 
 Section.defaultProps = {

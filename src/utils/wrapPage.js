@@ -1,21 +1,21 @@
 import React from "react"
 import { ThemeProvider, createGlobalStyle } from "styled-components"
 import theme from "../theme"
-
-const fontImports = ["@import url('https://fonts.googleapis.com/css?family=Notable');"]
+import { Header } from "../components"
 
 const GlobalStyle = createGlobalStyle({
     "body": {
-        ...fontImports,
         background: theme.colors.primary,
         color: theme.colors.white,
-        fontFamily: theme.fonts.base
+        fontFamily: theme.fonts.base,
+        margin: "0px"
     }
 })
 
 const wrapPage = WrappedComponent => () => (
     <ThemeProvider theme={theme}>
         <GlobalStyle/>
+        <Header/>
         <WrappedComponent/>
     </ThemeProvider>
 )

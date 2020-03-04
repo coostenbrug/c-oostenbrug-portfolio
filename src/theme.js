@@ -3,9 +3,9 @@ const theme = {
         primary: "#210D1B",
         primaryLight: "#725752",
 
-        secondary: "#584D3D",
-        secondaryLight: "#E5BE9E",
-        secondaryDark:"#F5E3E0",
+        secondary: "#E5BE9E",
+        secondaryLight: "#F5E3E0",
+        secondaryDark:"#584D3D",
 
         white: "#FFFFFF",
         black: "#111111"

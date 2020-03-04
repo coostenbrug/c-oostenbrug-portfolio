@@ -6,12 +6,11 @@ import { darken } from "polished"
 
 const BoxLinkWrap = styled.a(({background, theme})=>({
     flexGrow: 1,
-    minWidth: "200px",
-    maxWidth: "400px",
+    minWidth: "250px",
     display: "flex",
     flexDirection: "column",
     justifyContent: "center",
-    padding: "32px 8px",
+    padding: "56px 8px",
     cursor: "pointer",
     textDecoration: "none",
     background,

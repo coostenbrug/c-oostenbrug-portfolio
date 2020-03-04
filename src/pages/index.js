@@ -1,14 +1,32 @@
 import React from "react"
-import { Button } from "../components"
-import { hiddenByComingSoon } from "../utils"
-import { wrapPage } from "../utils"
+import { Button, BoxLinkSet, BoxLink, Tag, TagSet } from "../components"
+import { hiddenByComingSoon, wrapPage } from "../utils"
+import theme from "../theme"
 
 
 const LandingPage = () => (
     <>
-        <a color="blue" href="/projects/project1">To Project 1</a>
-        <a color="blue" href="/projects/project2">To Project 2</a>
+        <BoxLinkSet>
+            <BoxLink href="/projects/project1">
+                <TagSet>
+                    <Tag> Tag 1 </Tag>
+                    <Tag> Tag 2 </Tag>
+                </TagSet>
+            </BoxLink>
+            <BoxLink href="/projects/project1" background={theme.colors.primaryLight}>
+                <TagSet>
+                    <Tag> Tag 1 </Tag>
+                    <Tag> Tag 2 </Tag>
+                </TagSet>
+            </BoxLink>
+            <BoxLink href="/projects/project2">
+                <TagSet>
+                    <Tag> Tag 1 </Tag>
+                    <Tag> Tag 2 </Tag>
+                </TagSet>
+            </BoxLink>
+        </BoxLinkSet>
     </>
 )
 
-export default wrapPage(hiddenByComingSoon(LandingPage))
+export default wrapPage(LandingPage)

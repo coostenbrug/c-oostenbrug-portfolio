@@ -6,7 +6,8 @@ const Tag = styled.div(({theme})=>({
     fontSize: "14px",
     padding: "2px 8px",
     border: `${theme.colors.secondaryDark} solid 2px`,
-    borderRadius: "18px"
+    borderRadius: "18px",
+    whiteSpace: "nowrap"
 }))
 
 export default Tag

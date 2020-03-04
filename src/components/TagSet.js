@@ -6,7 +6,8 @@ const TagSet = styled.div({
     flexWrap: "wrap",
     justifyContent: " center",
     [`${Tag}`]: {
-        marginLeft: "8px"
+        marginLeft: "8px",
+        marginBottom: "4px"
     },
     marginLeft: "-8px"
 })

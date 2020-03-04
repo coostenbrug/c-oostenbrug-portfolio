@@ -1,17 +1,27 @@
 const theme = {
     colors: {
-        primary: "#210D1B",
-        primaryLight: "#725752",
+        primary: "#F7F7F4",
+        primaryDark: "#D7BE82",
+        primaryDarkest: "#7A4419",
 
-        secondary: "#E5BE9E",
-        secondaryLight: "#F5E3E0",
-        secondaryDark:"#584D3D",
+        secondary: "#5C415D",
+        secondaryLight: "#957396",
+        secondaryDark:"#451947",
 
-        white: "#FFFFFF",
-        black: "#111111"
+        white: "#FFF",
+        black: "#333",
+
+        darkGrey: "#393E41",
+
+        textColorPrimary: "#333",
+        textColorSecondary: "#F7F7F4",
+
+        lightBlue: "#54B9DD",
+        darkBlue: "#1E555C"
     },
     fonts: {
-        base: "'Notable', sans-serif;"
+        base: "'Notable', sans-serif;",
+        heading: "'Montserrat Subrayada', sans-serif"
     }
 }
 

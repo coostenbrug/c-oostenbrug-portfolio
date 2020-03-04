@@ -1,17 +1,20 @@
 import styled from "styled-components"
 import React from "react"
 
-const SectionHeader = styled.h1({
+const SectionHeader = styled.h1(({theme})=>({
+    fontFamily: theme.fonts.heading,
+    fontWeight: 400,
     textAlign: "center",
-    background: "rgba(0,0,0,0.4)",
+    background: theme.colors.secondary,
+    color: theme.colors.textColorSecondary,
     padding: "16px 0",
     margin: 0
-})
+}))
 
 
 const SectionInner = styled.div(({mobilePadding})=>({
     margin: "0 auto",
-    width: "100%",
+    width: mobilePadding ? "calc(100% - 32px)" : "100%",
     maxWidth: "1200px",
     padding: mobilePadding ? "0 16px" : "0"
 }))

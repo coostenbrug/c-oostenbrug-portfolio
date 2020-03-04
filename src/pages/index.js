@@ -25,6 +25,42 @@ const LandingPage = () => (
                     <Tag> Tag 2 </Tag>
                 </TagSet>
             </BoxLink>
+            <BoxLink href="/projects/project1">
+                <TagSet>
+                    <Tag> Tag 1 </Tag>
+                    <Tag> Tag 2 </Tag>
+                </TagSet>
+            </BoxLink>
+            <BoxLink href="/projects/project1" background={theme.colors.primaryLight}>
+                <TagSet>
+                    <Tag> Tag 1 </Tag>
+                    <Tag> Tag 2 </Tag>
+                </TagSet>
+            </BoxLink>
+            <BoxLink href="/projects/project2">
+                <TagSet>
+                    <Tag> Tag 1 </Tag>
+                    <Tag> Tag 2 </Tag>
+                </TagSet>
+            </BoxLink>
+            <BoxLink href="/projects/project1">
+                <TagSet>
+                    <Tag> Tag 1 </Tag>
+                    <Tag> Tag 2 </Tag>
+                </TagSet>
+            </BoxLink>
+            <BoxLink href="/projects/project1" background={theme.colors.primaryLight}>
+                <TagSet>
+                    <Tag> Tag 1 </Tag>
+                    <Tag> Tag 2 </Tag>
+                </TagSet>
+            </BoxLink>
+            <BoxLink href="/projects/project2">
+                <TagSet>
+                    <Tag> Tag 1 </Tag>
+                    <Tag> Tag 2 </Tag>
+                </TagSet>
+            </BoxLink>
         </BoxLinkSet>
     </>
 )

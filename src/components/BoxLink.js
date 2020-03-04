@@ -3,6 +3,9 @@ import React from "react"
 import theme from "../theme"
 
 const BoxLinkWrap = styled.a(({background})=>({
+    flexGrow: 1,
+    minWidth: "200px",
+    maxWidth: "400px",
     display: "flex",
     flexDirection: "column",
     justifyContent: "center",

@@ -12,7 +12,7 @@ const Tag = styled.div(({color})=>({
 }))
 
 Tag.defaultProps = {
-    color: theme.colors.secondaryLight
+    color: theme.colors.textColorSecondary
 }
 
 export default Tag

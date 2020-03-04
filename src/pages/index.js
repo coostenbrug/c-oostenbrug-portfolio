@@ -2,6 +2,7 @@ import React from "react"
 import { Button, ButtonSet, BoxLinkSet, BoxLink, Tag, TagSet, Section } from "../components"
 import { hiddenByComingSoon, wrapPage } from "../utils"
 import { importIcons, projectData } from "../shared"
+import theme from "../theme"
 
 importIcons()
 
@@ -12,8 +13,8 @@ function scrollToElement(e) {
 
 const LandingPage = () => (
     <>
-        <div style={{margin: "300px 0"}}>
-            <h1 style={{textAlign: "center", fontSize: "56px", margin: "0 0 32px 0"}}>Christiaan Oostenbrug</h1>
+        <div style={{height: "60vh", paddingTop: "40vh"}}>
+            <h1 style={{fontWeight: "400", fontFamily: theme.fonts.heading, textAlign: "center", fontSize: "56px", margin: "0 0 32px 0"}}>Christiaan Oostenbrug</h1>
             <ButtonSet style={{marginTop: "16px"}}>
                 <Button name={"aboutme"} onClick={scrollToElement}>About Me</Button>
                 <Button name={"experience"} onClick={scrollToElement}>Experience</Button>
@@ -23,10 +24,10 @@ const LandingPage = () => (
             </ButtonSet>
         </div>
         <Section title="About Me" anchorId="aboutme">
-            <p>Filler text filler text filler text filler text filler text filler text filler text filler text filler text filler text filler text filler text filler text filler text filler text filler text filler text filler text filler text filler text filler text</p>
+            <p style={{margin: "80px 0"}}>Filler text filler text filler text filler text filler text filler text filler text filler text filler text filler text filler text filler text filler text filler text filler text filler text filler text filler text filler text filler text filler text</p>
         </Section>
         <Section title="Experience" anchorId="experience">
-        <p>Filler text filler text filler text filler text filler text filler text filler text filler text filler text filler text filler text filler text filler text filler text filler text filler text filler text filler text filler text filler text filler text</p>
+            <p style={{margin: "80px 0"}}>Filler text filler text filler text filler text filler text filler text filler text filler text filler text filler text filler text filler text filler text filler text filler text filler text filler text filler text filler text filler text filler text</p>
         </Section>
         <Section title="Projects" anchorId="projects" mobilePadding={false}>
             <BoxLinkSet>
@@ -48,12 +49,12 @@ const LandingPage = () => (
             </BoxLinkSet>
         </Section>
         <Section title="Skills" anchorId="skills">
-        <p>Filler text filler text filler text filler text filler text filler text filler text filler text filler text filler text filler text filler text filler text filler text filler text filler text filler text filler text filler text filler text filler text</p>
+            <p style={{margin: "80px 0"}}>Filler text filler text filler text filler text filler text filler text filler text filler text filler text filler text filler text filler text filler text filler text filler text filler text filler text filler text filler text filler text filler text</p>
         </Section>
         <Section title="Education" anchorId="education">
-        <p>Filler text filler text filler text filler text filler text filler text filler text filler text filler text filler text filler text filler text filler text filler text filler text filler text filler text filler text filler text filler text filler text</p>
+            <p style={{margin: "80px 0"}}>Filler text filler text filler text filler text filler text filler text filler text filler text filler text filler text filler text filler text filler text filler text filler text filler text filler text filler text filler text filler text filler text</p>
         </Section>
     </>
 )
 
-export default wrapPage(hiddenByComingSoon(LandingPage))
+export default wrapPage((LandingPage))

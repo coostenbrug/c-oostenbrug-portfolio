@@ -10,12 +10,13 @@ const Button = styled.button(({color})=> ({
     "backgroundColor": "transparent",
     "borderRadius": "8px",
     "border": "2px solid",
-    whiteSpace: "nowrap"
+    whiteSpace: "nowrap",
+    fontSize: "16px"
 })
 )
 
 Button.defaultProps = {
-    color: theme.colors.white
+    color: theme.colors.textColorPrimary
 }
 
 export default Button

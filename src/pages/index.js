@@ -8,7 +8,7 @@ importIcons()
 const LandingPage = () => (
     <>
         <div>
-            <h1 style={{textAlign: "center", fontSize: "56px", margin: "200px 0"}}>Christaan Oostenbrug</h1>
+            <h1 style={{textAlign: "center", fontSize: "56px", margin: "200px 0"}}>Christiaan Oostenbrug</h1>
         </div>
         <Section title="About Me">
             <p>About me text</p>

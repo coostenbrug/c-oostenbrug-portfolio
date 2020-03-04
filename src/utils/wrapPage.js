@@ -1,6 +1,7 @@
 import React from "react"
 import { ThemeProvider, createGlobalStyle } from "styled-components"
 import theme from "../theme"
+import { Header } from "../components"
 
 const GlobalStyle = createGlobalStyle({
     "body": {
@@ -14,6 +15,7 @@ const GlobalStyle = createGlobalStyle({
 const wrapPage = WrappedComponent => () => (
     <ThemeProvider theme={theme}>
         <GlobalStyle/>
+        <Header/>
         <WrappedComponent/>
     </ThemeProvider>
 )

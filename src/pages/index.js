@@ -1,11 +1,11 @@
 import React from "react"
-import { Button, BoxLinkSet, BoxLink, Tag, TagSet } from "../components"
+import { Button, BoxLinkSet, BoxLink, Tag, TagSet, Section } from "../components"
 import { hiddenByComingSoon, wrapPage } from "../utils"
 import theme from "../theme"
 
 
 const LandingPage = () => (
-    <>
+    <Section title="Projects">
         <BoxLinkSet>
             <BoxLink href="/projects/project1">
                 <TagSet>
@@ -62,7 +62,7 @@ const LandingPage = () => (
                 </TagSet>
             </BoxLink>
         </BoxLinkSet>
-    </>
+    </Section>
 )
 
 export default wrapPage(LandingPage)

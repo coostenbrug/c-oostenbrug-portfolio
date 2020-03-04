@@ -25,9 +25,15 @@ const BoxLinkTitle = styled.p({
     textAlign: "center"
 })
 
-const BoxLink = ({background, href, children, title}, props) => (
+const IconWrapper = styled.div({
+    margin: "0 auto"
+})
+
+const BoxLink = ({background, href, children, title, icon}, props) => (
     <BoxLinkWrap background={background} href={href}>
-        <FontAwesomeIcon icon={coffee}/>
+        <IconWrapper>
+            <FontAwesomeIcon size="3x" icon={icon}/>
+        </IconWrapper>
         <BoxLinkTitle>{title}</BoxLinkTitle>
         {children}
     </BoxLinkWrap>
@@ -35,6 +41,7 @@ const BoxLink = ({background, href, children, title}, props) => (
 
 BoxLink.defaultProps = {
     background: theme.colors.secondaryLight,
+    icon: "coffee",
     title: "Project Title"
 }
 

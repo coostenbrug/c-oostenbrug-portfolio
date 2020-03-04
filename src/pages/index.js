@@ -1,69 +1,28 @@
 import React from "react"
-import { Button, BoxLinkSet, BoxLink, Tag, TagSet, Section } from "../components"
+import { BoxLinkSet, BoxLink, Tag, TagSet, Section } from "../components"
 import { hiddenByComingSoon, wrapPage } from "../utils"
-import theme from "../theme"
-import { faCoffee } from "@fortawesome/free-solid-svg-icons"
-import { library } from "'@fortawesome/fontawesome-svg-core"
+import { importIcons, projectData } from "../shared"
 
-library.add(faCoffee)
+importIcons()
 
 const LandingPage = () => (
     <Section title="Projects">
         <BoxLinkSet>
-            <BoxLink href="/projects/project1">
-                <TagSet>
-                    <Tag> Tag 1 </Tag>
-                    <Tag> Tag 2 </Tag>
-                </TagSet>
-            </BoxLink>
-            <BoxLink href="/projects/project1" background={theme.colors.primaryLight}>
-                <TagSet>
-                    <Tag> Tag 1 </Tag>
-                    <Tag> Tag 2 </Tag>
-                </TagSet>
-            </BoxLink>
-            <BoxLink href="/projects/project2">
-                <TagSet>
-                    <Tag> Tag 1 </Tag>
-                    <Tag> Tag 2 </Tag>
-                </TagSet>
-            </BoxLink>
-            <BoxLink href="/projects/project1">
-                <TagSet>
-                    <Tag> Tag 1 </Tag>
-                    <Tag> Tag 2 </Tag>
-                </TagSet>
-            </BoxLink>
-            <BoxLink href="/projects/project1" background={theme.colors.primaryLight}>
-                <TagSet>
-                    <Tag> Tag 1 </Tag>
-                    <Tag> Tag 2 </Tag>
-                </TagSet>
-            </BoxLink>
-            <BoxLink href="/projects/project2">
-                <TagSet>
-                    <Tag> Tag 1 </Tag>
-                    <Tag> Tag 2 </Tag>
-                </TagSet>
-            </BoxLink>
-            <BoxLink href="/projects/project1">
-                <TagSet>
-                    <Tag> Tag 1 </Tag>
-                    <Tag> Tag 2 </Tag>
-                </TagSet>
-            </BoxLink>
-            <BoxLink href="/projects/project1" background={theme.colors.primaryLight}>
-                <TagSet>
-                    <Tag> Tag 1 </Tag>
-                    <Tag> Tag 2 </Tag>
-                </TagSet>
-            </BoxLink>
-            <BoxLink href="/projects/project2">
-                <TagSet>
-                    <Tag> Tag 1 </Tag>
-                    <Tag> Tag 2 </Tag>
-                </TagSet>
-            </BoxLink>
+            {projectData.map(projectLink => (
+                <BoxLink
+                    title={projectLink.title}
+                    key={projectLink.title}
+                    background={projectLink.background}
+                    href={projectLink.href}
+                    icon={projectLink.icon}
+                >
+                    <TagSet>
+                    {projectLink.tags.map(tag => (
+                        <Tag key={tag}>{tag}</Tag>
+                    ))}
+                    </TagSet>
+                </BoxLink>
+            ))}
         </BoxLinkSet>
     </Section>
 )

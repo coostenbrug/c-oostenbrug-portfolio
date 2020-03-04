@@ -1,7 +1,15 @@
 import React from "react"
 import styled from "styled-components"
 
+const Logo = styled.a(({theme})=>({
+    color: theme.colors.white,
+    textDecoration: "none",
+    fontSize: "30px", 
+    margin: "0"
+}))
+
 const HeaderWrapper = styled.div({
+    zIndex: 100,
     height: "56px",
     background: "rgba(0,0,0,0.8)",
     position: "fixed",
@@ -21,7 +29,7 @@ const HeaderInner = styled.div({
 const Header = props => (
     <HeaderWrapper>
         <HeaderInner>
-            <p style={{fontSize: "30px", margin: "0"}}>coostenbrug.com</p>
+            <Logo href="/">coostenbrug.ca</Logo>
         </HeaderInner>
     </HeaderWrapper>
 )

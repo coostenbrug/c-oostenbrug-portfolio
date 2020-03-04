@@ -1,5 +1,5 @@
 import React from "react"
-import { BoxLinkSet, BoxLink, Tag, TagSet, Section } from "../components"
+import { Button, ButtonSet, BoxLinkSet, BoxLink, Tag, TagSet, Section } from "../components"
 import { hiddenByComingSoon, wrapPage } from "../utils"
 import { importIcons, projectData } from "../shared"
 
@@ -7,13 +7,23 @@ importIcons()
 
 const LandingPage = () => (
     <>
-        <div>
-            <h1 style={{textAlign: "center", fontSize: "56px", margin: "200px 0"}}>Christiaan Oostenbrug</h1>
+        <div style={{margin: "300px 0"}}>
+            <h1 style={{textAlign: "center", fontSize: "56px", margin: "0 0 32px 0"}}>Christiaan Oostenbrug</h1>
+            <ButtonSet style={{marginTop: "16px"}}>
+                <Button>About Me</Button>
+                <Button>Experience</Button>
+                <Button>Projects</Button>
+                <Button>Skills</Button>
+                <Button>Education</Button>
+            </ButtonSet>
         </div>
-        <Section title="About Me">
-            <p>About me text</p>
+        <Section title="About Me" id="About Me">
+            <p>Filler text filler text filler text filler text filler text filler text filler text filler text filler text filler text filler text filler text filler text filler text filler text filler text filler text filler text filler text filler text filler text</p>
         </Section>
-        <Section title="Projects">
+        <Section title="Experience" id="Experience">
+        <p>Filler text filler text filler text filler text filler text filler text filler text filler text filler text filler text filler text filler text filler text filler text filler text filler text filler text filler text filler text filler text filler text</p>
+        </Section>
+        <Section title="Projects" id="Projects">
             <BoxLinkSet>
                 {projectData.map(projectLink => (
                     <BoxLink
@@ -31,6 +41,12 @@ const LandingPage = () => (
                     </BoxLink>
                 ))}
             </BoxLinkSet>
+        </Section>
+        <Section title="Skills" id="Skills">
+        <p>Filler text filler text filler text filler text filler text filler text filler text filler text filler text filler text filler text filler text filler text filler text filler text filler text filler text filler text filler text filler text filler text</p>
+        </Section>
+        <Section title="Education" id="Education">
+        <p>Filler text filler text filler text filler text filler text filler text filler text filler text filler text filler text filler text filler text filler text filler text filler text filler text filler text filler text filler text filler text filler text</p>
         </Section>
     </>
 )

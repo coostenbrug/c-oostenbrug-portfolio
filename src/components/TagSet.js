@@ -3,6 +3,7 @@ import Tag from "./Tag"
 
 const TagSet = styled.div({
     display: "flex",
+    flexWrap: "wrap",
     justifyContent: " center",
     [`${Tag}`]: {
         marginLeft: "8px"

@@ -5,7 +5,7 @@ const BoxLinkSetInner = styled.div({
     margin: "0 auto",
     display: "flex",
     flexWrap: "wrap",
-    justifyContent: "stretch",
+    justifyContent: "center",
     maxWidth: "1200px"
 })
 

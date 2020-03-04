@@ -20,10 +20,10 @@ const BoxLinkWrap = styled.a(({background, theme})=>({
     outline: `3px solid ${darken(0.1,background)}`,
     outlineOffset: "-6px",
     ":hover": {
-        background: darken(0.1, background),
-        outline: `3px solid ${darken(0.15,background)}`
+        background: darken(0.08, background),
+        outline: `3px solid ${darken(0.12,background)}`
     },
-    ":focus": {
+    ":focus:not(:active)": {
         outline: `3px solid ${theme.colors.lightBlue}`
     }
 }))

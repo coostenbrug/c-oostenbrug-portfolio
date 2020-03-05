@@ -30,7 +30,7 @@ const LandingPage = () => (
             <p style={{margin: "80px 0"}}>Filler text filler text filler text filler text filler text filler text filler text filler text filler text filler text filler text filler text filler text filler text filler text filler text filler text filler text filler text filler text filler text</p>
         </Section>
         <Section title="Projects" anchorId="projects" mobilePadding={false}>
-            <BoxLinkSet>
+            <BoxLinkSet style={{margin: "20px 0 48px 0"}}>
                 {projectData.map(projectLink => (
                     <BoxLink
                         title={projectLink.title}

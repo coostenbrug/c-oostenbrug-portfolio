@@ -42,7 +42,7 @@ const IconWrapper = styled.div({
 const BoxLink = ({background, color, href, children, title, icon}, props) => (
     <BoxLinkWrap background={background} href={href}>
         <IconWrapper>
-            <FontAwesomeIcon color={color} size="3x" icon={icon}/>
+            <FontAwesomeIcon color={color} size="4x" icon={icon}/>
         </IconWrapper>
         <BoxLinkTitle color={color}>{title}</BoxLinkTitle>
         {children}

@@ -1,5 +1,5 @@
 import React from "react"
-import { Button, ButtonSet, BoxLinkSet, BoxLink, Tag, TagSet, Section } from "../components"
+import { Card, Button, ButtonSet, BoxLinkSet, BoxLink, Tag, TagSet, Section } from "../components"
 import { hiddenByComingSoon, wrapPage } from "../utils"
 import { importIcons, projectData } from "../shared"
 import theme from "../theme"
@@ -27,7 +27,11 @@ const LandingPage = () => (
             <p style={{margin: "80px 0"}}>Filler text filler text filler text filler text filler text filler text filler text filler text filler text filler text filler text filler text filler text filler text filler text filler text filler text filler text filler text filler text filler text</p>
         </Section>
         <Section title="Experience" anchorId="experience">
-            <p style={{margin: "80px 0"}}>Filler text filler text filler text filler text filler text filler text filler text filler text filler text filler text filler text filler text filler text filler text filler text filler text filler text filler text filler text filler text filler text</p>
+            <div style={{margin: "20px 0 48px 0"}}>
+                <Card>
+                    Card Content
+                </Card>
+            </div>
         </Section>
         <Section title="Projects" anchorId="projects" mobilePadding={false}>
             <BoxLinkSet style={{margin: "20px 0 48px 0"}}>

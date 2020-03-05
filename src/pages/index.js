@@ -1,5 +1,5 @@
 import React from "react"
-import { Button, ButtonSet, BoxLinkSet, BoxLink, Tag, TagSet, Section } from "../components"
+import { ExperienceCard, Button, ButtonSet, BoxLinkSet, BoxLink, Tag, TagSet, Section } from "../components"
 import { hiddenByComingSoon, wrapPage } from "../utils"
 import { importIcons, projectData } from "../shared"
 import theme from "../theme"
@@ -27,10 +27,15 @@ const LandingPage = () => (
             <p style={{margin: "80px 0"}}>Filler text filler text filler text filler text filler text filler text filler text filler text filler text filler text filler text filler text filler text filler text filler text filler text filler text filler text filler text filler text filler text</p>
         </Section>
         <Section title="Experience" anchorId="experience">
-            <p style={{margin: "80px 0"}}>Filler text filler text filler text filler text filler text filler text filler text filler text filler text filler text filler text filler text filler text filler text filler text filler text filler text filler text filler text filler text filler text</p>
+            <div style={{margin: "20px 0 48px 0"}}>
+                <ExperienceCard style={{marginBottom: "16px"}}/>
+                <ExperienceCard background={theme.colors.grey} style={{marginBottom: "16px"}}/>
+                <ExperienceCard background={theme.colors.blue} style={{marginBottom: "16px"}}/>
+                <ExperienceCard background={theme.colors.primaryDarkest}/>
+            </div>
         </Section>
         <Section title="Projects" anchorId="projects" mobilePadding={false}>
-            <BoxLinkSet>
+            <BoxLinkSet style={{margin: "20px 0 48px 0"}}>
                 {projectData.map(projectLink => (
                     <BoxLink
                         title={projectLink.title}
@@ -57,4 +62,4 @@ const LandingPage = () => (
     </>
 )
 
-export default wrapPage(hiddenByComingSoon(LandingPage))
+export default wrapPage((LandingPage))

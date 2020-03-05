@@ -1,5 +1,5 @@
 import React from "react"
-import { Card, Button, ButtonSet, BoxLinkSet, BoxLink, Tag, TagSet, Section } from "../components"
+import { ExperienceCard, Button, ButtonSet, BoxLinkSet, BoxLink, Tag, TagSet, Section } from "../components"
 import { hiddenByComingSoon, wrapPage } from "../utils"
 import { importIcons, projectData } from "../shared"
 import theme from "../theme"
@@ -28,9 +28,10 @@ const LandingPage = () => (
         </Section>
         <Section title="Experience" anchorId="experience">
             <div style={{margin: "20px 0 48px 0"}}>
-                <Card>
-                    Card Content
-                </Card>
+                <ExperienceCard style={{marginBottom: "16px"}}/>
+                <ExperienceCard background={theme.colors.grey} style={{marginBottom: "16px"}}/>
+                <ExperienceCard background={theme.colors.blue} style={{marginBottom: "16px"}}/>
+                <ExperienceCard background={theme.colors.primaryDarkest}/>
             </div>
         </Section>
         <Section title="Projects" anchorId="projects" mobilePadding={false}>
@@ -61,4 +62,4 @@ const LandingPage = () => (
     </>
 )
 
-export default wrapPage(hiddenByComingSoon(LandingPage))
+export default wrapPage((LandingPage))

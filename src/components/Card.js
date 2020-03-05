@@ -4,7 +4,7 @@ import theme from "../theme"
 
 const Card = styled.div(({background}) => ({
     background: background,
-    padding: "16px 8px",
+    padding: "16px 32px",
     boxShadow: "0 -1px 1 #000",
     position: "relative",
     "::before": {

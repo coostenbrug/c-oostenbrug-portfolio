@@ -11,8 +11,7 @@ export const BoxLinkWrap = styled.a(({background, theme})=>({
     minWidth: "260px",
     display: "flex",
     flexDirection: "column",
-    justifyContent: "center",
-    padding: "56px 16px",
+    padding: "24px 16px",
     cursor: "pointer",
     textDecoration: "none",
     background,
@@ -31,11 +30,11 @@ export const BoxLinkWrap = styled.a(({background, theme})=>({
 }))
 
 const BoxLinkTitle = styled.p(({color})=>({
+    margin: "auto 0",
     color: color,
+    verticalAlign: "middle",
     fontSize: "24px",
-    margin: "8px auto 16px auto",
     textAlign: "center",
-    maxWidth: "80%"
 }))
 
 const IconWrapper = styled.div({
@@ -47,12 +46,17 @@ const BoxLink = ({background, color, href, children, title, icon, tags}, props) 
         <IconWrapper>
             <FontAwesomeIcon color={color} size="4x" icon={icon}/>
         </IconWrapper>
-        <BoxLinkTitle color={color}>{title}</BoxLinkTitle>
-        <TagSet>
-            {tags.map(tag => (
-                <Tag key={tag}>{tag}</Tag>
-            ))}
-        </TagSet>
+        <div style={{height: "60px", display: "flex", justifyContent: "center"}}>
+            <BoxLinkTitle color={color}>{title}</BoxLinkTitle>
+        </div>
+        <div style={{marginBottom: "16px",width: "100%", height: 2, background: darken(0.1,background)}}/>
+        <div style={{margin: "auto"}}>
+            <TagSet>
+                {tags.map(tag => (
+                    <Tag key={tag}>{tag}</Tag>
+                ))}
+            </TagSet>
+        </div>
         {children}
     </BoxLinkWrap>
 )

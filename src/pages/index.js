@@ -1,9 +1,8 @@
 import React from "react"
 import { ExperienceCard, Button, ButtonSet, BoxLinkSet, BoxLink, Tag, TagSet, Section } from "../components"
-import { hiddenByComingSoon, wrapPage } from "../utils"
+import { wrapPage } from "../utils"
 import { importIcons, projectData, experienceData, educationData } from "../shared"
 import theme from "../theme"
-import {darken} from "polished"
 
 importIcons()
 

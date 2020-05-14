@@ -9,8 +9,8 @@ const TagSet = styled.div({
         marginLeft: "8px",
         marginBottom: "8px"
     },
-    //marginLeft: "-8px",
-    width: "100%"
+    marginLeft: "-8px",
+    marginBottom: "-8px"
 })
 
 export default TagSet

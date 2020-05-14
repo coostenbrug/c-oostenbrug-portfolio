@@ -5,9 +5,10 @@ const SectionHeader = styled.h1(({theme})=>({
     fontFamily: theme.fonts.heading,
     fontWeight: 400,
     textAlign: "center",
-    background: theme.colors.secondary,
-    color: theme.colors.textColorSecondary,
+    background: theme.colors.secondaryLight,
+    color: theme.colors.white,
     padding: "16px 0",
+    borderBottom: `solid 2px ${theme.colors.yellow}`,
     margin: 0
 }))
 
@@ -16,7 +17,7 @@ const SectionInner = styled.div(({mobilePadding})=>({
     margin: "0 auto",
     width: mobilePadding ? "calc(100% - 32px)" : "100%",
     maxWidth: "1200px",
-    padding: mobilePadding ? "0 16px" : "0"
+    padding: mobilePadding ? "48px 16px" : "48px 0"
 }))
 
 const ScrollAnchor = styled.div({

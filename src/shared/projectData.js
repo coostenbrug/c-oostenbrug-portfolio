@@ -2,46 +2,46 @@ import theme from "../theme"
 
 const projectData = [
     {
-        title: "Project Title 1",
-        tags: ["Tag 1", "Tag 2"],
+        title: "PillPals",
+        tags: ["Android", "Kotlin", "UI/UX"],
         href: "/projects/project1",
         icon: "coffee",
-        background: theme.colors.grey
+        background: theme.colors.cardColors[1]
     },
     {
-        title: "Project Title 2",
-        tags: ["Tag 3"],
+        title: "Nulogy Design System",
+        tags: ["React","styled-components"],
         href: "/projects/project1",
         icon: "pills",
-        background: theme.colors.red
+        background: theme.colors.cardColors[0]
     },
     {
-        title: "Project Title 3",
-        tags: ["Tag 1", "Tag 3"],
+        title: "JIT Line Replenishment",
+        tags: ["UI/UX", "Feature", "Supply Chain"],
         href: "/projects/project1",
         icon: "coffee",
-        background: theme.colors.primaryDarkest
+        background: theme.colors.cardColors[3]
     },
     {
-        title: "Project Title 4",
-        tags: ["Tag 2", "Tag 4"],
+        title: "Form Access Control",
+        tags: ["UI/UX", "Feature", "Quality Control"],
         href: "/projects/project1",
         icon: "pills",
-        background: theme.colors.blue
+        background: theme.colors.cardColors[2]
     },
     {
-        title: "Project Title 5",
-        tags: ["Tag 1", "Tag 2", "Tag 5"],
+        title: "Armory & Machine",
+        tags: ["Mobile", "Game", "Unity"],
         href: "/projects/project1",
         icon: "coffee",
-        background: theme.colors.primaryDarkest
+        background: theme.colors.cardColors[3]
     },
     {
-        title: "Project Title 6",
-        tags: ["Tag 1", "Tag 2"],
+        title: "For Fun projects",
+        tags: ["Games", "Electronics", "+More"],
         href: "/projects/project1",
         icon: "pills",
-        background: theme.colors.grey
+        background: theme.colors.cardColors[1]
     },
 ]
 

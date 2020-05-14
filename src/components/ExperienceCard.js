@@ -37,15 +37,16 @@ const ExperienceList = styled.ul({
 })
 
 const ExperienceCard = ({background, icon, listItems, title, company, date, ...props}) => (
-    <Card background={background} {...props}>
-        <ExperienceHeaderWrapper>
+    <Card background={background} {...props}
+        header={<ExperienceHeaderWrapper>
             <FontAwesomeIcon size="4x" icon={icon}/>
             <div style={{flexGrow: 1, marginLeft: "8px"}}>
                 <CardTitle>{title}</CardTitle>
                 <CompanyText>{company}</CompanyText>
             </div>
             <DateText>{date}</DateText>
-        </ExperienceHeaderWrapper>
+        </ExperienceHeaderWrapper>}
+        >
         <ExperienceList>
             {listItems.map(item => (
                 <li key={item}>{item}</li>

@@ -12,11 +12,12 @@ const Logo = styled.a(({theme})=>({
 const HeaderWrapper = styled.div(({theme})=>({
     zIndex: 100,
     height: "56px",
-    background: theme.colors.primaryDark,
+    background: theme.colors.secondaryLight,
     position: "fixed",
     top: 0,
     left: 0,
-    right: 0
+    right: 0,
+    borderBottom: `solid 2px ${theme.colors.red}`
 }))
 
 const HeaderInner = styled.div({

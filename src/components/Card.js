@@ -38,6 +38,10 @@ const CardBody = styled.div(({background}) => ({
     }
 }))
 
+CardBody.defaultProps = {
+    background: theme.colors.red
+}
+
 const Card = (props) => (
     <div style={props.style}>
         <CardHeader background={props.background}>

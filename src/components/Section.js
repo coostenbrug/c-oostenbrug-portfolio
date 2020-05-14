@@ -17,7 +17,7 @@ const SectionInner = styled.div(({mobilePadding})=>({
     margin: "0 auto",
     width: mobilePadding ? "calc(100% - 32px)" : "100%",
     maxWidth: "1200px",
-    padding: mobilePadding ? "0 16px" : "0"
+    padding: mobilePadding ? "48px 16px" : "48px 0"
 }))
 
 const ScrollAnchor = styled.div({

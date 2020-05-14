@@ -7,7 +7,7 @@ const SectionHeader = styled.h1(({theme})=>({
     textAlign: "center",
     background: theme.colors.secondaryLight,
     color: theme.colors.white,
-    padding: "8px 0",
+    padding: "16px 0",
     borderBottom: `solid 2px ${theme.colors.yellow}`,
     margin: 0
 }))

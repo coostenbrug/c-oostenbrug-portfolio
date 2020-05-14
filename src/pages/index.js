@@ -27,14 +27,14 @@ const LandingPage = () => (
             <p style={{margin: "80px 0"}}>Filler text filler text filler text filler text filler text filler text filler text filler text filler text filler text filler text filler text filler text filler text filler text filler text filler text filler text filler text filler text filler text</p>
         </Section>
         <Section title="Experience" anchorId="experience">
-            <div style={{margin: "24px 0 24px 0"}}>
+            <div style={{margin: "48px 0 48px 0"}}>
                 {experienceData.map(experience => (
                     <ExperienceCard style={{marginBottom: "24px"}} {...experience}/>
                 ))}
             </div>
         </Section>
         <Section title="Projects" anchorId="projects">
-            <div style={{margin: "24px 0 48px 0"}}>
+            <div style={{margin: "48px 0 48px 0"}}>
                 <BoxLinkSet>
                     {projectData.map(projectLink => (
                         <BoxLink

@@ -3,8 +3,7 @@ import { ExperienceCard, Button, ButtonSet, BoxLinkSet, BoxLink, Tag, TagSet, Se
 import { hiddenByComingSoon, wrapPage } from "../utils"
 import { importIcons, projectData, experienceData, educationData } from "../shared"
 import theme from "../theme"
-
-console.log(educationData)
+import {darken} from "polished"
 
 importIcons()
 
@@ -21,7 +20,6 @@ const LandingPage = () => (
                 <Button name={"aboutme"} onClick={scrollToElement}>About Me</Button>
                 <Button name={"experience"} onClick={scrollToElement}>Experience</Button>
                 <Button name={"projects"} onClick={scrollToElement}>Projects</Button>
-                <Button name={"skills"} onClick={scrollToElement}>Skills</Button>
                 <Button name={"education"} onClick={scrollToElement}>Education</Button>
             </ButtonSet>
         </div>
@@ -36,24 +34,9 @@ const LandingPage = () => (
         <Section title="Projects" anchorId="projects">
             <BoxLinkSet>
                 {projectData.map(projectLink => (
-                    <BoxLink
-                        title={projectLink.title}
-                        key={projectLink.title}
-                        background={projectLink.background}
-                        href={projectLink.href}
-                        icon={projectLink.icon}
-                    >
-                        <TagSet>
-                        {projectLink.tags.map(tag => (
-                            <Tag key={tag}>{tag}</Tag>
-                        ))}
-                        </TagSet>
-                    </BoxLink>
+                    <BoxLink {...projectLink} key={projectLink.title}/>
                 ))}
             </BoxLinkSet>
-        </Section>
-        <Section title="Skills" anchorId="skills">
-            <p style={{margin: "80px 0"}}>Filler text filler text filler text filler text filler text filler text filler text filler text filler text filler text filler text filler text filler text filler text filler text filler text filler text filler text filler text filler text filler text</p>
         </Section>
         <Section title="Education" anchorId="education">
             <ExperienceCard {...educationData}/>

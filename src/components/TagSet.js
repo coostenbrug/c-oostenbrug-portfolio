@@ -7,9 +7,10 @@ const TagSet = styled.div({
     justifyContent: " center",
     [`${Tag}`]: {
         marginLeft: "8px",
-        marginBottom: "4px"
+        marginBottom: "8px"
     },
-    marginLeft: "-8px"
+    //marginLeft: "-8px",
+    width: "100%"
 })
 
 export default TagSet

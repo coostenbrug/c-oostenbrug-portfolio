@@ -3,14 +3,16 @@ import React from "react"
 import theme from "../theme"
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome" 
 import { darken } from "polished"
+import Tag from "./Tag"
+import TagSet from "./TagSet"
 
 export const BoxLinkWrap = styled.a(({background, theme})=>({
     flexGrow: 1,
-    minWidth: "250px",
+    minWidth: "260px",
     display: "flex",
     flexDirection: "column",
     justifyContent: "center",
-    padding: "56px 8px",
+    padding: "56px 16px",
     cursor: "pointer",
     textDecoration: "none",
     background,
@@ -32,19 +34,25 @@ const BoxLinkTitle = styled.p(({color})=>({
     color: color,
     fontSize: "24px",
     margin: "8px auto 16px auto",
-    textAlign: "center"
+    textAlign: "center",
+    maxWidth: "80%"
 }))
 
 const IconWrapper = styled.div({
     margin: "0 auto"
 })
 
-const BoxLink = ({background, color, href, children, title, icon}, props) => (
+const BoxLink = ({background, color, href, children, title, icon, tags}, props) => (
     <BoxLinkWrap background={background} href={href} {...props}>
         <IconWrapper>
             <FontAwesomeIcon color={color} size="4x" icon={icon}/>
         </IconWrapper>
         <BoxLinkTitle color={color}>{title}</BoxLinkTitle>
+        <TagSet>
+            {tags.map(tag => (
+                <Tag key={tag}>{tag}</Tag>
+            ))}
+        </TagSet>
         {children}
     </BoxLinkWrap>
 )
@@ -53,7 +61,8 @@ BoxLink.defaultProps = {
     background: theme.colors.secondaryDark,
     color: theme.colors.textColorSecondary,
     icon: "coffee",
-    title: "Project Title"
+    title: "Project Title",
+    tags: []
 }
 
 export default BoxLink

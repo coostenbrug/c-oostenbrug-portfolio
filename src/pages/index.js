@@ -14,7 +14,7 @@ function scrollToElement(e) {
 const LandingPage = () => (
     <>
         <div style={{height: "60vh", paddingTop: "40vh"}}>
-            <h1 style={{fontWeight: "400", fontFamily: theme.fonts.heading, textAlign: "center", fontSize: "56px", margin: "0 0 32px 0"}}>Christiaan Oostenbrug</h1>
+            <h1 style={{color: theme.colors.yellow, fontWeight: "400", fontFamily: theme.fonts.heading, textAlign: "center", fontSize: "56px", margin: "0 0 32px 0"}}>Christiaan Oostenbrug</h1>
             <ButtonSet style={{marginTop: "16px"}}>
                 <Button name={"aboutme"} onClick={scrollToElement}>About Me</Button>
                 <Button name={"experience"} onClick={scrollToElement}>Experience</Button>
@@ -27,37 +27,39 @@ const LandingPage = () => (
             <p style={{margin: "80px 0"}}>Filler text filler text filler text filler text filler text filler text filler text filler text filler text filler text filler text filler text filler text filler text filler text filler text filler text filler text filler text filler text filler text</p>
         </Section>
         <Section title="Experience" anchorId="experience">
-            <div style={{margin: "20px 0 48px 0"}}>
-                <ExperienceCard style={{marginBottom: "16px"}}/>
-                <ExperienceCard background={theme.colors.grey} style={{marginBottom: "16px"}}/>
-                <ExperienceCard background={theme.colors.blue} style={{marginBottom: "16px"}}/>
-                <ExperienceCard background={theme.colors.primaryDarkest}/>
+            <div style={{margin: "24px 0 48px 0"}}>
+                <ExperienceCard background={theme.colors.cardColors[0]} style={{marginBottom: "24px"}}/>
+                <ExperienceCard background={theme.colors.cardColors[1]} style={{marginBottom: "24px"}}/>
+                <ExperienceCard background={theme.colors.cardColors[2]} style={{marginBottom: "24px"}}/>
+                <ExperienceCard background={theme.colors.cardColors[3]}/>
             </div>
         </Section>
-        <Section title="Projects" anchorId="projects" mobilePadding={false}>
-            <BoxLinkSet style={{margin: "20px 0 48px 0"}}>
-                {projectData.map(projectLink => (
-                    <BoxLink
-                        title={projectLink.title}
-                        key={projectLink.title}
-                        background={projectLink.background}
-                        href={projectLink.href}
-                        icon={projectLink.icon}
-                    >
-                        <TagSet>
-                        {projectLink.tags.map(tag => (
-                            <Tag key={tag}>{tag}</Tag>
-                        ))}
-                        </TagSet>
-                    </BoxLink>
-                ))}
-            </BoxLinkSet>
+        <Section title="Projects" anchorId="projects">
+            <div style={{margin: "24px 0 48px 0"}}>
+                <BoxLinkSet>
+                    {projectData.map(projectLink => (
+                        <BoxLink
+                            title={projectLink.title}
+                            key={projectLink.title}
+                            background={projectLink.background}
+                            href={projectLink.href}
+                            icon={projectLink.icon}
+                        >
+                            <TagSet>
+                            {projectLink.tags.map(tag => (
+                                <Tag key={tag}>{tag}</Tag>
+                            ))}
+                            </TagSet>
+                        </BoxLink>
+                    ))}
+                </BoxLinkSet>
+            </div>
         </Section>
         <Section title="Skills" anchorId="skills">
             <p style={{margin: "80px 0"}}>Filler text filler text filler text filler text filler text filler text filler text filler text filler text filler text filler text filler text filler text filler text filler text filler text filler text filler text filler text filler text filler text</p>
         </Section>
         <Section title="Education" anchorId="education">
-            <p style={{margin: "80px 0"}}>Filler text filler text filler text filler text filler text filler text filler text filler text filler text filler text filler text filler text filler text filler text filler text filler text filler text filler text filler text filler text filler text</p>
+            <p style={{margin: "80px 0 500px 0"}}>Filler text filler text filler text filler text filler text filler text filler text filler text filler text filler text filler text filler text filler text filler text filler text filler text filler text filler text filler text filler text filler text</p>
         </Section>
     </>
 )

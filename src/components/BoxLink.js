@@ -4,7 +4,7 @@ import theme from "../theme"
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome" 
 import { darken } from "polished"
 
-const BoxLinkWrap = styled.a(({background, theme})=>({
+export const BoxLinkWrap = styled.a(({background, theme})=>({
     flexGrow: 1,
     minWidth: "250px",
     display: "flex",
@@ -40,7 +40,7 @@ const IconWrapper = styled.div({
 })
 
 const BoxLink = ({background, color, href, children, title, icon}, props) => (
-    <BoxLinkWrap background={background} href={href}>
+    <BoxLinkWrap background={background} href={href} {...props}>
         <IconWrapper>
             <FontAwesomeIcon color={color} size="4x" icon={icon}/>
         </IconWrapper>

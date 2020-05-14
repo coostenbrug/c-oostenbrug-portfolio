@@ -5,9 +5,10 @@ const SectionHeader = styled.h1(({theme})=>({
     fontFamily: theme.fonts.heading,
     fontWeight: 400,
     textAlign: "center",
-    background: theme.colors.secondary,
-    color: theme.colors.textColorSecondary,
-    padding: "16px 0",
+    background: theme.colors.secondaryLight,
+    color: theme.colors.white,
+    padding: "8px 0",
+    borderBottom: `solid 2px ${theme.colors.yellow}`,
     margin: 0
 }))
 
